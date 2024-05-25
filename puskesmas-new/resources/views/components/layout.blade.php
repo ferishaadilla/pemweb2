@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Blank Page</title>
+  <title>Project Laravel Puskesmas-New</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -11,16 +11,20 @@
   <link rel="stylesheet" href="{{ asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('admin/dist/css/adminlte.min.css') }}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="{{ asset ('admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
-    @include('components.navbar')
+  @include('components.navbar')
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-    @include('components.sidebar')
+  @include('components.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -29,7 +33,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Blank Page</h1>
+            <h1>{{ $page_name }}</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -47,7 +51,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Title</h3>
+          <h3 class="card-title">{{ $page_title }}</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -59,11 +63,13 @@
           </div>
         </div>
         <div class="card-body">
-          Start creating your amazing application!
+          {{ $page_content }}
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-          Footer
+          <p>
+          Informasi ini bersifat ekskelusif!
+          </p>
         </div>
         <!-- /.card-footer-->
       </div>
@@ -74,8 +80,8 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <!-- footer -->
-    @include('components.footer')
+  @include('components.footer')
+
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -85,12 +91,16 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="{{ asset ('admin/plugins/jquery/jquery.min.css') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset ('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="{{ asset ('admin/dist/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+<script src="{{ asset ('admin/dist/js/demo.js') }}"></script>
+<!-- overlayScrollbars -->
+<script src="{{ asset ('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<!-- ChartJS -->
+<script src="{{ asset ('admin/plugins/chart.js/Chart.min.js') }}"></script>
 </body>
 </html>
