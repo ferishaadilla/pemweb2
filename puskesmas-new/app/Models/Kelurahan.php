@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Kelurahan extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama', 'kec_nama'];
+
+    protected $fillable = ['nama', 'kecamatan_nama'];
+
+    protected $table = 'kelurahans';
 }

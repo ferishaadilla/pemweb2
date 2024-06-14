@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('kelurahans', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('kec_nama');
+            $table->string('kecamatan_nama');
             $table->timestamps();
         });
     }
