@@ -35,8 +35,9 @@ Route::middleware('auth')->group(function () {
         Route::delete('/destroy/{id}',[KelurahanController::class, 'destroy']);
 
     });
+    
     // paisen
-    Route::prefix('pasien')->group(function () {
+    Route::middleware('admin')->prefix('pasien')->group(function () {
         Route::get('/',[PasienController::class, 'index']);
         Route::get('/create',[PasienController::class, 'create']);
         Route::post('/store',[PasienController::class, 'store']);
